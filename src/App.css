@@ -8,16 +8,20 @@
   list-style: none;
 }
 .text_blue {
-  color: #5f9ea0;
+  color: #5f9ea0 !important;
+}
+.bg_blue {
+  background: #5f9ea0;
 }
 .input_design {
   border-radius: 4px !important;
   color: #a7a7a7 !important;
   font: medium !important;
   outline: none !important;
+  cursor: pointer;
+  background: rgb(245, 244, 244) !important;
 }
 .Submit_btn {
-  background: #5f9ea0 !important;
   border: none !important;
   padding: 12px 45px !important;
 }
@@ -28,6 +32,6 @@
 }
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 #5f9ea0;
+    box-shadow: 0 0 0 0 #FFFFFF;
   }
 }

@@ -45,8 +45,8 @@ const ClientForm = () => {
   };
 
   return (
-    <div className="p-4">
-      <Container className="py-4 shadow rounded-3 bg-light">
+    <div className="p-4 bg_blue">
+      <Container className="py-4">
         <Formik
           initialValues={{
             name: "",
@@ -72,11 +72,11 @@ const ClientForm = () => {
         >
           {() => (
             <Form>
-              <h1 className="text-center mb-5 fw-bold text_blue">
+              <h1 className="text-center mb-5 fw-bold text-white text-decoration-underline">
                 Registration Form
               </h1>
               {/* ------------personal-info------------ */}
-              <Row className="d-flex gap-md-0 gap-2">
+              <Row className="d-flex gap-md-0 gap-2 p-3 shadow rounded-2 bg-light-subtle">
                 <h2 className="text_blue fs-3 fw-medium">
                   Personal Information
                 </h2>
@@ -100,7 +100,7 @@ const ClientForm = () => {
                     </BootstrapForm.Label>
                     <Field
                       as="select"
-                      className="form-control"
+                      className="form-control input_design"
                       name="headQuarter"
                     >
                       <option value="">Select</option>
@@ -119,7 +119,11 @@ const ClientForm = () => {
                     <BootstrapForm.Label className="mb-1">
                       State
                     </BootstrapForm.Label>
-                    <Field as="select" className="form-control" name="state">
+                    <Field
+                      as="select"
+                      className="form-control input_design"
+                      name="state"
+                    >
                       <option value="">Select</option>
                       <option value="State1">State 1</option>
                       <option value="State2">State 2</option>
@@ -133,8 +137,8 @@ const ClientForm = () => {
                 </Col>
               </Row>
               {/* ------------working-area------------ */}
-              <Row className="my-5 d-flex gap-md-0 gap-2">
-                <h2 className="text_blue fs-3 fw-medium">Working Area </h2>
+              <Row className="my-4 d-flex gap-md-0 gap-2 p-3 shadow rounded-2 bg-light-subtle">
+                <h2 className="fs-3 fw-medium text_blue">Working Area </h2>
                 <Col md={6}>
                   <BootstrapForm.Group>
                     <BootstrapForm.Label className="mb-1">
@@ -142,7 +146,7 @@ const ClientForm = () => {
                     </BootstrapForm.Label>
                     <Field
                       as="select"
-                      className="form-control"
+                      className="form-control input_design"
                       name="workingState"
                     >
                       <option value="">Select</option>
@@ -163,7 +167,7 @@ const ClientForm = () => {
                     </BootstrapForm.Label>
                     <Field
                       as="select"
-                      className="form-control"
+                      className="form-control input_design"
                       name="workingCity"
                     >
                       <option value="">Select</option>
@@ -179,14 +183,17 @@ const ClientForm = () => {
                 </Col>
               </Row>
               {/* ------------interior-info------------ */}
-              <Row className="d-flex gap-md-0 gap-2">
-                <h2 className="text_blue fs-3 fw-medium">Interior</h2>
+              <Row className="d-flex gap-md-0 gap-2 p-3 shadow rounded-2 bg-light-subtle">
+                <h2 className="fs-3 fw-medium text_blue">Interior</h2>
                 <Col md={6}>
                   <BootstrapForm.Group>
                     <BootstrapForm.Label className="mb-1">
                       City
                     </BootstrapForm.Label>
-                    <Field className="form-control" name="interiorCity" />
+                    <Field
+                      className="form-control input_design"
+                      name="interiorCity"
+                    />
                     <ErrorMessage
                       name="interiorCity"
                       component="div"
@@ -200,7 +207,10 @@ const ClientForm = () => {
                     <BootstrapForm.Label className="mb-1">
                       Place of Work
                     </BootstrapForm.Label>
-                    <Field className="form-control" name="placeOfWork" />
+                    <Field
+                      className="form-control input_design"
+                      name="placeOfWork"
+                    />
                     <ErrorMessage
                       name="placeOfWork"
                       component="div"
@@ -210,14 +220,18 @@ const ClientForm = () => {
                 </Col>
               </Row>
               {/* ------------vehicle-details------------ */}
-              <Row className="my-5 d-flex gap-md-0 gap-2">
-                <h2 className="text_blue fs-3 fw-medium">Vehicle Details</h2>
+              <Row className="my-4 d-flex gap-md-0 gap-2 p-3 shadow rounded-2 bg-light-subtle">
+                <h2 className="fs-3 fw-medium text_blue">Vehicle Details</h2>
                 <Col md={6}>
                   <BootstrapForm.Group>
                     <BootstrapForm.Label className="mb-1">
                       Vehicle
                     </BootstrapForm.Label>
-                    <Field as="select" className="form-control" name="vehicle">
+                    <Field
+                      as="select"
+                      className="form-control input_design"
+                      name="vehicle"
+                    >
                       <option value="">Select</option>
                       <option value="Bike">Bike</option>
                       <option value="Car">Car</option>
@@ -236,7 +250,7 @@ const ClientForm = () => {
                       Vehicle Number
                     </BootstrapForm.Label>
                     <Field
-                      className="form-control"
+                      className="form-control input_design"
                       name="vehicleRc"
                       type="text"
                     />
@@ -249,8 +263,8 @@ const ClientForm = () => {
                 </Col>
               </Row>
               {/* ------------identification------------ */}
-              <Row className="d-flex gap-md-0 gap-2">
-                <h2 className="text_blue fs-3 fw-medium">
+              <Row className="d-flex gap-md-0 gap-2 p-3 shadow rounded-2 bg-light-subtle">
+                <h2 className="fs-3 fw-medium text_blue">
                   Identification and Salary
                 </h2>
                 <Col md={6}>
@@ -259,7 +273,7 @@ const ClientForm = () => {
                       Aadhar Number
                     </BootstrapForm.Label>
                     <Field
-                      className="form-control"
+                      className="form-control input_design"
                       name="aadharNumber"
                       placeholder="Enter 12 digit Aadhar"
                     />
@@ -277,7 +291,7 @@ const ClientForm = () => {
                       Salary
                     </BootstrapForm.Label>
                     <Field
-                      className="form-control"
+                      className="form-control input_design"
                       name="salary"
                       type="number"
                     />
@@ -290,15 +304,15 @@ const ClientForm = () => {
                 </Col>
               </Row>
               {/* ------------allowance------------ */}
-              <Row className="my-5 d-flex gap-md-0 gap-2">
-                <h2 className="text_blue fs-3 fw-medium">Allowance</h2>
+              <Row className="my-4 d-flex gap-md-0 gap-2 p-3 shadow rounded-2 bg-light-subtle">
+                <h2 className="fs-3 fw-medium text_blue">Allowance</h2>
                 <Col md={4}>
                   <BootstrapForm.Group>
                     <BootstrapForm.Label className="mb-1">
                       Head Quarter
                     </BootstrapForm.Label>
                     <Field
-                      className="form-control"
+                      className="form-control input_design"
                       name="allowanceHeadQuarter"
                     />
                     <ErrorMessage
@@ -314,7 +328,10 @@ const ClientForm = () => {
                     <BootstrapForm.Label className="mb-1">
                       Ex Station
                     </BootstrapForm.Label>
-                    <Field className="form-control" name="allowanceExStation" />
+                    <Field
+                      className="form-control input_design"
+                      name="allowanceExStation"
+                    />
                     <ErrorMessage
                       name="allowanceExStation"
                       component="div"
@@ -329,7 +346,7 @@ const ClientForm = () => {
                       Out Station
                     </BootstrapForm.Label>
                     <Field
-                      className="form-control"
+                      className="form-control input_design"
                       name="allowanceOutStation"
                     />
                     <ErrorMessage
@@ -341,8 +358,8 @@ const ClientForm = () => {
                 </Col>
               </Row>
               {/* ------------other-details------------ */}
-              <Row className="d-flex gap-md-0 gap-2">
-                <h2 className="text_blue fs-3 fw-medium">Other Details</h2>
+              <Row className="d-flex gap-md-0 gap-2 p-3 shadow rounded-2 bg-light-subtle">
+                <h2 className="fs-3 fw-medium text_blue">Other Details</h2>
                 <Col md={4}>
                   <BootstrapForm.Group>
                     <BootstrapForm.Label className="mb-1">
@@ -350,7 +367,7 @@ const ClientForm = () => {
                     </BootstrapForm.Label>
                     <Field
                       as="select"
-                      className="form-control"
+                      className="form-control input_design"
                       name="distributorName"
                     >
                       <option value="">Select</option>
@@ -369,7 +386,11 @@ const ClientForm = () => {
                     <BootstrapForm.Label className="mb-1">
                       CSA
                     </BootstrapForm.Label>
-                    <Field as="select" className="form-control" name="csa">
+                    <Field
+                      as="select"
+                      className="form-control input_design"
+                      name="csa"
+                    >
                       <option value="">Select</option>
                       <option value="CSA1">CSA 1</option>
                       <option value="CSA2">CSA 2</option>
@@ -388,7 +409,7 @@ const ClientForm = () => {
                     </BootstrapForm.Label>
                     <Field
                       as="select"
-                      className="form-control"
+                      className="form-control input_design"
                       name="reportingManager"
                     >
                       <option value="">Select</option>
@@ -403,9 +424,12 @@ const ClientForm = () => {
                   </BootstrapForm.Group>
                 </Col>
               </Row>
-
+              {/* ----------------Submit-Btn------------ */}
               <div className="mt-5 d-flex justify-content-center align-items-center">
-                <Button type="submit" className="Submit_btn">
+                <Button
+                  type="submit"
+                  className="Submit_btn bg-white text_blue fw-bold fs-5"
+                >
                   Submit
                 </Button>
               </div>
